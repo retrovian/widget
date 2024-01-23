@@ -14,7 +14,20 @@
             font-family: 'CustomFont', cursive; /* Fallback to cursive if CustomFont fails to load */
             /* Other styles remain the same */
         }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
         
+        #header {
+            text-align: center; /* Center the header text */
+            width: 100%; /* Ensure the header takes full width */
+            margin-bottom: 1px; /* Spacing between the header and the timer */
+        }
         body {
             margin: 0;
             height: 100vh;
@@ -34,7 +47,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 20px 10px;
+            padding: 10px 10px;
         }
         
         .time-unit {
@@ -61,29 +74,33 @@
     </style>
 </head>
 <body>
-    <div id="header">
-        <h1 id="event-title">Our Big Day</h1>
+    <div id="container">
+        <div id="header">
+            <h1 id="event-title">Our Big Day</h1>
+        </div>
+        <div id="timer">
+            <!-- Time units: years, months, weeks, days, hours, minutes, seconds -->
+            <div class="time-unit">
+                <div id="years" class="numbers"></div>
+                <div class="label">Year</div>
+            </div>
+            <div class="time-unit">
+                <div id="months" class="numbers"></div>
+                <div class="label">Months</div>
+            </div>
+            <div class="time-unit">
+                <div id="weeks" class="numbers"></div>
+                <div class="label">Weeks</div>
+            </div>
+            <div class="days">
+                <div id="days" class="numbers"></div>
+                <div class="label">Days</div>
+            </div>
+            <!-- ... Additional time units ... -->
+        </div>
     </div>
-    <div id="timer">
-        <!-- Time units: years, months, weeks, days, hours, minutes, seconds -->
-        <div class="time-unit">
-            <div id="years" class="numbers"></div>
-            <div class="label">Year</div>
-        </div>
-        <div class="time-unit">
-            <div id="months" class="numbers"></div>
-            <div class="label">Months</div>
-        </div>
-        <div class="time-unit">
-            <div id="weeks" class="numbers"></div>
-            <div class="label">Weeks</div>
-        </div>
-        <div class="days">
-            <div id="days" class="numbers"></div>
-           <div class="label">Days</div>
-        </div>
-        <!-- ... Additional time units ... -->
-    </div>
+</body>
+
 
     <script>
         const myDate = new Date('2025-10-25T10:00:00.000Z'); // Set target date here
