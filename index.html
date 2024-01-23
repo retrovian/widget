@@ -8,10 +8,12 @@
         @font-face {
             font-family: 'CustomFont';
             src: url('Baltiholm.ttf') format('truetype');
+            
         }
         
         #event-title {
             font-family: 'CustomFont', cursive; /* Fallback to cursive if CustomFont fails to load */
+            color: #f3f4f6;
             /* Other styles remain the same */
         }
 
@@ -32,11 +34,12 @@
         body {
             margin: 0;
             height: 100vh;
-            background-color: #f3f4f6; /* Light grey background */
+            background-color: #466c37; /* dark green background */
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 2em;
         }
         
         #timer {
@@ -62,13 +65,13 @@
         
         .numbers {
             font-weight: bold;
-            font-size: 2em;
-            color: #006400; /* Deep green color */
+            font-size: 3em;
+            color: #f3f4f6; /* grey color */
         }
         
         .label {
             font-size: 1em;
-            color: #006400; /* Deep green color */
+            color: #f3f4f6; /* grey color */
             padding-top: 5px;
           
         }
