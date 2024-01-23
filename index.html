@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CountDown Timer</title>
     <style>
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('Baltiholm.ttf') format('truetype');
+        }
+        
+        #event-title {
+            font-family: 'CustomFont', cursive; /* Fallback to cursive if CustomFont fails to load */
+            /* Other styles remain the same */
+        }
+        
         body {
             margin: 0;
             height: 100vh;
@@ -52,6 +62,7 @@
 </head>
 <body>
     <div id="timer">
+        <h1 id="event-title">❤️ Our Big Day</h1>
         <!-- Time units: years, months, weeks, days, hours, minutes, seconds -->
         <div class="time-unit">
             <div id="years" class="numbers"></div>
